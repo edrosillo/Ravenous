@@ -1,6 +1,7 @@
-const apiKey = 'BG5JSz-c9kZZm4gynpjC00yIzR62PepoNxphv66DHaxrFeBmAAU3u42BisdD1b3Fg6JHKRwVF6P3bsF3XLjWXBMV_nmOxKmrgTV5n7WPp9f7wwI5rSnjpvAPYpS5RW3Yx';
+const apiKey = 'BG5JSc9kZZm4gynpjC00yIzR62PepoNxphv66DHaxrFeBmAAU3u42BisdD1b3Fg6JHKRwVF6P3bsF3XLjWXBMV_nmOxKmrgTV5n7WPp9f7wwI5rSnjpvAPYpS5RW3Yx';
 
 const Yelp = {
+
     search(term, location, sortBy) {
         return fetch(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}&sort_by=${sortBy}`, {
             headers: {
@@ -19,13 +20,14 @@ const Yelp = {
                     state: business.location.state,
                     zipCode: business.location.zip_code,
                     category: business.categories.title,
-                    rating: business.rating,
+                    rating: business.rating.reviewCount,
                     reviewCount: business.review_count
                 }));
             }
         });
     }
 };
+
 
 
 export default Yelp;
