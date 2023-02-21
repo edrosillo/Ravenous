@@ -4,8 +4,8 @@
   "homepage": "https://edrosillo.github.io/Ravenous/",
   "private": true,
   "dependencies": {
-    "react": "^16.4.1",
-    "react-dom": "^16.13.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-scripts": "1.1.4",
     "save": "^2.9.0",
     "whatwg-fetch": "^2.0.4"
